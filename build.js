@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var BowerWebpackPlugin = require('bower-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var config = {
   context: path.join(__dirname, 'src'), // исходная директория
   entry: './index', // файл для сборки, если несколько - указываем hash (entry name => filename)
@@ -16,8 +17,25 @@ var config = {
       manifestFiles: ['bower.json', '.bower.json'],
       includes: /.*/,
       excludes: /.*\.less$/
-    })
+    }),
+    new ExtractTextPlugin('styles.css')
   ],
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
+  module: {
+    loaders: [{
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    }, {
+      test: /\.jsx$/,
+      //loader: 'jsx-loader'
+      loader: 'babel'
+    }],
+  }
+  /*,
+    plugins: [
+    ]*/
 };
 var compiler = webpack(config);
 compiler.run(function(err, stats) {
