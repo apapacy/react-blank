@@ -1,0 +1,21 @@
+{
+  "name": "react-blank",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Андрей Овчаренко <ovcharenkoav@meta.ua>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/apapacy/react-blank",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.1"
+  }
+}

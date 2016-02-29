@@ -1,0 +1,23 @@
+{
+  "name": "react-blank",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apapacy/react-blank.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apapacy/react-blank/issues"
+  },
+  "homepage": "https://github.com/apapacy/react-blank#readme",
+  "devDependencies": {
+    "bower-webpack-plugin": "^0.1.9",
+    "webpack": "^1.12.14"
+  }
+}
