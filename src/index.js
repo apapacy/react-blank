@@ -9,8 +9,13 @@ React.render(
 );
 
 
+
+
+
+
+
 if (NODE_ENV === 'production') {
-	$('body').append('There is Production mode.');
+	$('body').append('There is Production mode. ++');
 } else {
-	$('body').append('There is Development mode.');
+	$('body').append('There is Development mode. ++');
 }
