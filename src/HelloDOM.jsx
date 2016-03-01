@@ -5,7 +5,7 @@ console.log(MyChildComponent.toString());
 
 class MyComponent extends React.Component {
   render() {
-    return <div>Hello World!!!<MyChildComponent /> {this.props.name}</div>;
+    return <div>Hello World<MyChildComponent /> {this.props.name}</div>;
   }
 }
 

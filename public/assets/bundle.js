@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e50bba78c56da97e78e5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0cefe646c1e653518535"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30063,7 +30063,7 @@
 	      return React.createElement(
 	        "div",
 	        null,
-	        "Hello World!!!",
+	        "Hello World",
 	        React.createElement(MyChildComponent, null),
 	        " ",
 	        this.props.name
