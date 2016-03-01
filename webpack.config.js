@@ -21,6 +21,10 @@ module.exports = {
     //  bootstrap: "bootstrap.css",
     //  modulesDirectories: ['bower_components/bootstrap/dist/css'],
     //}),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify('production')

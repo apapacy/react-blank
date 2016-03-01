@@ -18,9 +18,12 @@ class Layout extends React.Component {
   <script src000="/dependencies/js/require.js" type="text/javascript"></script>
   <script src000="/dependencies/js/admin/require.config.js" type="text/javascript"></script>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="/assets/foundation/js/foundation.js" type="application/javascript"></script>
+  <script src="/assets/bootstrap/js/bootstrap.js" type="application/javascript"></script>
 </head>
-<body>
+<body id="layout">
 <LoginForm />
+
 </body>
 </html>)
   }

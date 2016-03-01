@@ -52,6 +52,7 @@ gulp.task('bootstrap', function() {
       base: conf.path
     })
     .pipe(gulp.dest(config.DEST_PATH + '/bootstrap'))
+    .pipe(gulp.dest('src/bootstrap'))
 });
 
 gulp.task('foundation', function() {
@@ -60,4 +61,5 @@ gulp.task('foundation', function() {
       base: conf.path
     })
     .pipe(gulp.dest(config.DEST_PATH + '/foundation'))
+    .pipe(gulp.dest('src/foundation'))
 });

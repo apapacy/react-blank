@@ -1,21 +1,10 @@
 var $ = require('jquery');
+var jQuery = $;
+var foundation=require("foundation")
 var React = require('react');
-var Toolbar = require('./HelloDOM.jsx');
-require('./index.css');
-require('./header');
+var layout = require('./react/Layout.jsx');
 React.render(
-	React.createElement(Toolbar),
-	document.getElementById('toolbar')
+	React.createElement(layout),
+	document.getElementById('layout')
 );
-
-
-
-
-
-
-
-if (NODE_ENV === 'production') {
-	$('body').append('There is Production mode. ++');
-} else {
-	$('body').append('There is Development mode. ++');
-}
+alert(foundation)
