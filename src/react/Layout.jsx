@@ -5,7 +5,7 @@ var LoginForm = require('./admin/LoginForm.jsx');
 class Layout extends React.Component {
   render() {
     return (
-<html class="menu-closed" lang="ru">
+<html className="menu-closed" lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta content="IE=edge" http-equiv="X-UA-Compatible" />
@@ -18,12 +18,13 @@ class Layout extends React.Component {
   <script src000="/dependencies/js/require.js" type="text/javascript"></script>
   <script src000="/dependencies/js/admin/require.config.js" type="text/javascript"></script>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <script src="/assets/foundation/js/foundation.js" type="application/javascript"></script>
-  <script src="/assets/bootstrap/js/bootstrap.js" type="application/javascript"></script>
+  <script src00="/assets/foundation/js/foundation.js" type="application/javascript"></script>
+  <script src00="/assets/bootstrap/js/bootstrap.js" type="application/javascript"></script>
 </head>
-<body id="layout">
+<body>
+<div id="layout"></div>
 <LoginForm />
-
+<script src="/index.js"></script>
 </body>
 </html>)
   }
