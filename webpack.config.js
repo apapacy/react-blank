@@ -6,7 +6,7 @@ var BowerWebpackPlugin = require('bower-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-  watch:true,
+  watch: true,
   context: path.join(__dirname, 'src'), // исходная директория
   entry: {
     app: './index', // файл для сборки, если несколько - указываем hash (entry name => filename)
@@ -17,6 +17,10 @@ module.exports = {
     filename: "bundle.js"
   },
   plugins: [
+    //new webpack.ProvidePlugin({
+    //  bootstrap: "bootstrap.css",
+    //  modulesDirectories: ['bower_components/bootstrap/dist/css'],
+    //}),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify('production')
@@ -25,18 +29,26 @@ module.exports = {
       modulesDirectories: ['bower_components'],
       manifestFiles: ['bower.json', '.bower.json'],
       includes: /.*/,
-      excludes: /.*\.less$/
+      //excludes: /.*\.less$/
     }),
     new ExtractTextPlugin('styles.css')
   ],
-  resolve: {
+  resolve: [{
     extensions: ['', '.js', '.jsx'],
     output: "bundle.js"
-  },
+},
+//{ extensions: ['.css'],
+//  output: "vendor.css",
+//  modulesDirectories: ['bower_components/bootstrap/dist/css'],
+//}
+],
   module: {
     loaders: [{
       test: /\.css$/,
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+    }, {
+      test: /\.scss$/,
+      loaders: ["style", "css", "sass"]
     }, {
       test: /\.jsx$/,
       //loader: 'jsx-loader'

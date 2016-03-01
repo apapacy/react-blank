@@ -17,6 +17,8 @@
   ],
   "dependencies": {
     "jquery": "~2.2.1",
-    "debug": "*"
+    "debug": "*",
+    "bootstrap": "~3.3.6",
+    "foundation": "~5.5.3"
   }
 }
