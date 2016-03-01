@@ -3,6 +3,17 @@ var express = require('express');
 var router = express.Router();
 var fs = require("fs");
 var promify = require("../utils").promify2;
+var jsx = require("../utils").jsx;
+var React = require('react');
+var ReactDOMServer = require('react-dom/server');
+
+
+router.get("/", function(req, resp, next){
+  var Layout = jsx("Layout");
+  var layout  = React.createElement(Layout, {script: "<script src='/assets/bundle.js'></script>"}, null);
+  var output = ReactDOMServer.renderToString(layout);
+  resp.send(output).end();
+});
 
 router.get('/json-editor/get', async function(req, res, next) {
   var lang = res.locals.lang;

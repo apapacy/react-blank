@@ -14,9 +14,9 @@ require('traceur').require.makeDefault(function(filename) {
 });
 var path = require("path");
 require('node-jsx').install({
-  extension: '.jsx',
-  paths: [path.resolve(__dirname, 'src')]
+  extension: '.jsx'
 });
+var jsx = require("./app/utils").jsx;
 
 
 

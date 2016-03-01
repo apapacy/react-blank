@@ -7,8 +7,7 @@ class Layout extends React.Component {
     return (
 <html className="menu-closed" lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
   <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet" />
@@ -23,8 +22,7 @@ class Layout extends React.Component {
 </head>
 <body>
 <div id="layout"></div>
-<LoginForm />
-<script src="/index.js"></script>
+<div dangerouslySetInnerHTML={{__html:this.props.script}}></div>
 </body>
 </html>)
   }

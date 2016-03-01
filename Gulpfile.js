@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 // Пишет скомпонованные файлы в диреторию
-//var webpack = require('gulp-webpack');
+var webpack = require('gulp-webpack');
 // Перенаправляет скомпонованные файлы в поток (с теми же урлами)
-var webpack = require('webpack-stream');
+//var webpack = require('webpack-stream');
 var config = {
   dependencies: {
     bootstrap: {
@@ -21,7 +21,7 @@ var config = {
 };
 
 
-gulp.task('default', ['serve', 'bootstrap', 'foundation'], function() {
+gulp.task('default', [/*'serve',*/ 'bootstrap', 'foundation'], function() {
   return gulp.src('src/index.js')
     .pipe(webpack(require('./webpack.config.js')))
     .pipe(gulp.dest('public/assets'), {
@@ -30,20 +30,20 @@ gulp.task('default', ['serve', 'bootstrap', 'foundation'], function() {
 });
 
 
-var browserSync = require('browser-sync').create();
-var reload = browserSync.reload;
-gulp.task('serve', function() {
+//var browserSync = require('browser-sync').create();
+//var reload = browserSync.reload;
+//gulp.task('serve', function() {
 
   // Serve files from the root of this project
-  browserSync.init(
-    './public/assets/**.*', {
-      server: {
-        baseDir: "./public"
-      }
-    });
-
-  gulp.watch("*.*").on("change", reload);
-});
+//  browserSync.init(
+//    './public/assets/**.*', {
+//      server: {
+//        baseDir: "./public"
+//      }
+//    });
+//
+//  gulp.watch("*.*").on("change", reload);
+//});
 
 
 gulp.task('bootstrap', function() {

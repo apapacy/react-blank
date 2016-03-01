@@ -72,8 +72,13 @@ function promify2() {
   });
 }
 
+function jsx(file) {
+  return require(process.cwd() + "/src/react/" + file + ".jsx");
+}
+
 module.exports = {
   promify: promify,
   promify1: promify1,
-  promify2: promify2
+  promify2: promify2,
+  jsx: jsx
 };
