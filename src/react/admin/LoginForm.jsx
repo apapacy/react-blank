@@ -32,6 +32,7 @@ class LoginForm extends React.Component {
     )
   }
   componentDidMount() {
+  console.log(this)
   // foundation library prevent onClick event from <a onClick=...>
     $(this.refs.loginButton).on('click', () => {
       this.handleLogin.apply(this);
@@ -42,7 +43,7 @@ class LoginForm extends React.Component {
   }
   handleLogin(event) {
     alert("login++");
-    console.log(this);
+    console.log(this.props);
     console.log(event);
   }
 }
