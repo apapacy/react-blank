@@ -10,7 +10,8 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const USER_LOGIN = {
   SEND: 'USER_LOGIN_SEND',
   SUCCESS: 'USER_LOGIN_SUCCESS',
-  FAILURE: 'USER_LOGIN_FAILURE'
+  FAILURE: 'USER_LOGIN_FAILURE',
+  LOGOUT: 'USER_LOGIN_LOGOUT'
 }
 
 //export default USER_LOGIN;
@@ -36,7 +37,7 @@ export function userLoginSend(name, password) {
   }
 }
 
-export function userLoginSuccess(name) {
+export function userLoginSuccess(name, responce) {
   return {
     type: USER_LOGIN.SUCCESS,
     name,
@@ -49,6 +50,13 @@ export function userLoginFailure(name, error) {
     type: USER_LOGIN.FAILURE,
     name,
     error
+  }
+}
+
+export function userLogoute(name, responce) {
+  return {
+    type: USER_LOGIN.LOGOUT,
+    eresponce
   }
 }
 
