@@ -41,7 +41,7 @@ export function userLoginSuccess(name, responce) {
   return {
     type: USER_LOGIN.SUCCESS,
     name,
-    response
+    responce
   }
 }
 
@@ -53,10 +53,10 @@ export function userLoginFailure(name, error) {
   }
 }
 
-export function userLogoute(name, responce) {
+export function userLogout(name, responce) {
   return {
     type: USER_LOGIN.LOGOUT,
-    eresponce
+    responce
   }
 }
 
@@ -68,11 +68,11 @@ export function setVisibilityFilter(filter) {
 }
 
 
-export function loadPostsSuccess(userId, response) {
+export function loadPostsSuccess(userId, responce) {
   return {
     type: 'LOAD_POSTS_SUCCESS',
     userId,
-    response
+    responce
   };
 }
 

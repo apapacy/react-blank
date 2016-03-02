@@ -4,6 +4,7 @@ import foundation from "foundation";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LoginForm from './react/admin/LoginForm.jsx';
+require("./admin/store")
 
 ReactDOM.render(
 	React.createElement(LoginForm),
