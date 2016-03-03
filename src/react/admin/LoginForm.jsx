@@ -1,7 +1,20 @@
 "use strict";
 var React = require('react');
 
+var connect= require('react-redux').connect;
+
+
+class Test extends React.Component {
+  render() {
+    return (<span>++++++++++++++</span>)
+  }
+}
+
 class LoginForm extends React.Component {
+  constructor(dispatch) {
+  super(dispatch)
+  this.dispatch = dispatch;
+  }
   render() {
     return (
       <div id="LoginForm" className="reveal-modal reveal tiny " data-reveal>
@@ -26,14 +39,15 @@ class LoginForm extends React.Component {
                 </p>
               </div>
             </form>
+            <Test />{this.props.children}
           </div>
         </div>
       </div>
     )
   }
   componentDidMount() {
-  console.log(this)
-  // foundation library prevent onClick event from <a onClick=...>
+    console.log(this.props.children)
+    // foundation library prevent onClick event from <a onClick=...>
     $(this.refs.loginButton).on('click', () => {
       this.handleLogin.apply(this);
     });
@@ -43,9 +57,9 @@ class LoginForm extends React.Component {
   }
   handleLogin(event) {
     alert("login++");
-    console.log(this.props);
-    console.log(event);
+    console.log(this.props.children);
+    console.log(this.dispatch);
   }
 }
 
-module.exports = LoginForm;
+module.exports = connect()(LoginForm);
