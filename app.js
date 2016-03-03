@@ -2,6 +2,9 @@
 
 require("coffee-script")
 require("coffee-script/register")
+require('babel-core/register')({
+    presets: ['es2015', 'react']
+});
 require('traceur').require.makeDefault(function(filename) {
     // don't transpile our dependencies, just our app
     return filename.indexOf('node_modules') === -1;
@@ -13,9 +16,13 @@ require('traceur').require.makeDefault(function(filename) {
   jsx:true,
 });
 var path = require("path");
-require('node-jsx').install({
-  extension: '.jsx'
-});
+
+
+//require('node-jsx').install({
+//  extension: '.jsx',
+//  harmony: false,
+//  es6module: true
+//});
 var jsx = require("./app/utils").jsx;
 
 

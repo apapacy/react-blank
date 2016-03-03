@@ -1,8 +1,11 @@
 "use strict";
 var React = require('react');
 var LoginForm = require('./admin/LoginForm.jsx');
-
+import _ from 'lodash';
 class Layout extends React.Component {
+constructor(){
+super();
+}
   render() {
     return (
 <html className="menu-closed" lang="ru">

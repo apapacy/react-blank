@@ -58,9 +58,9 @@ module.exports = {
       //loader: 'jsx-loader'
       loader: 'babel',
       //include: path.join(__dirname, 'src'),
-      //query: {
-      //  presets: ['es2015', 'react']
-      //}
+      query: {
+        presets: ['es2015', 'react']
+      }
 
     }],
   }

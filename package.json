@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./bin/www --harmony  --ext '.js|.css|.html|.twig|.sass|.coffee|.jsx'",
+    "start": "nodemon ./bin/www  --ext '.js|.css|.html|.twig|.sass|.coffee|.jsx'",
     "babel-jsx": "babel --presets react src --watch --out-dir public/assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
